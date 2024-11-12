@@ -13,7 +13,14 @@ function HeroSection() {
 					satisfaction.
 				</p>
 				<div className="space-x-4 mt-4">
-					<button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md">
+					<button
+						className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md"
+						onClick={() => {
+							// Scroll to the section with id="early-access"
+							const section = document.getElementById("early-access");
+							section?.scrollIntoView({ behavior: "smooth" });
+						}}
+					>
 						Get Early Access
 					</button>
 					<button className="border border-blue-600 text-blue-600 hover:bg-blue-100 px-4 py-2 rounded-md">
